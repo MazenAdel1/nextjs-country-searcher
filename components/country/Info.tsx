@@ -56,8 +56,8 @@ export default function Info({
   return (
     <div className="flex w-full flex-col gap-7 lg:w-1/2 lg:py-10">
       <h2 className="text-3xl font-bold">{countryData.name}</h2>
-      <div className="flex w-full flex-col justify-between gap-8 sm:flex-row sm:gap-0">
-        <ul>
+      <div className="flex w-full flex-col justify-between gap-8 sm:flex-row sm:gap-2">
+        <ul className="flex-1">
           {firstInfoData.map((el) => (
             <InfoListItem
               key={el.json}
@@ -69,7 +69,7 @@ export default function Info({
           ))}
         </ul>
 
-        <ul>
+        <ul className="flex-1">
           {secondInfoData.map((el) => (
             <InfoListItem
               key={el.json}
