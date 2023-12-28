@@ -44,8 +44,7 @@ export default function Content() {
         <SearchBar />
         <Filter />
       </div>
-      {!searchParam.get(`search`)?.trim() ||
-      searchParam.get(`search`)?.trim().length === 0 ? (
+      {!searchParam.get(`search`)?.trim() ? (
         <main className="grid grid-cols-1 justify-items-center gap-12 sm:grid-cols-2 md:grid-cols-3 md:gap-9 xl:grid-cols-4">
           <HomePageCards />
         </main>
