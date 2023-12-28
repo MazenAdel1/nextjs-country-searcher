@@ -19,7 +19,7 @@ export default function Content() {
           if (
             country.name
               .toLowerCase()
-              .includes(`${searchParam.get(`search`)?.trim()}`)
+              .includes(`${searchParam.get(`search`)?.trim().toLowerCase()}`)
           ) {
             return (
               <Card
