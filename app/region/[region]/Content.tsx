@@ -16,15 +16,12 @@ export default function Content() {
   const results = useMemo(
     () =>
       data.map((country) => {
-        if (
-          searchParam.get(`search`)?.trim() &&
-          searchParam.get(`search`)?.trim().length
-        ) {
+        if (searchParam.get(`search`)?.trim()) {
           if (
             country.region == region &&
             country.name
               .toLowerCase()
-              .includes(`${searchParam.get(`search`)?.trim()}`)
+              .includes(`${searchParam.get(`search`)?.trim().toLowerCase()}`)
           ) {
             return (
               <Card
